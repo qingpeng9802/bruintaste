@@ -1,0 +1,62 @@
+// stringTiInDeAlPic
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "title": {
+        "type": "string",
+        "multi": {
+          "english": {
+            "type": "string",
+            "analyzer": "lucene.english"
+          }
+        }
+      },
+      "ingredstr": {
+        "type": "string",
+        "multi": {
+          "english": {
+            "type": "string",
+            "analyzer": "lucene.english"
+          }
+        }
+      },
+      "desc": {
+        "type": "string",
+        "multi": {
+          "english": {
+            "type": "string",
+            "analyzer": "lucene.english"
+          }
+        }
+      },
+      "allerg": {
+        "type": "string"
+      },
+      "piccode": {
+        "type": "string"
+      }
+    }
+  }
+}
+
+// autocompleteTiInDe
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "title": {
+        "type": "autocomplete",
+        "maxGrams": 20
+      },
+      "ingredstr": {
+        "type": "autocomplete",
+        "maxGrams": 20
+      },
+      "desc": {
+        "type": "autocomplete",
+        "maxGrams": 20
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+dbmanage/
+log/
+temp/
+!.env.production.local

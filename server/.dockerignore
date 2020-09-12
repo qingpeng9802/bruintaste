@@ -1,0 +1,5 @@
+.env.development.local
+
+log/
+node_modules/
+dbmanage/

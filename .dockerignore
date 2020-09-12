@@ -1,0 +1,13 @@
+.env.development.local
+
+.git/
+.vscode/
+build/
+node_modules/
+temp/
+server/
+
+.firebase/
+.firebaserc
+firebase.json
+functions/

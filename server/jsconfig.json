@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es2020",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": "./",
+        "paths": {
+            "*": [
+                "./node_modules/*",
+                "./*"
+            ]
+        }
+    },
+    "exclude": [
+        "./node_modules",
+        "./dbmanage"
+    ]
+}

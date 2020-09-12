@@ -1,0 +1,12 @@
+.git/
+.vscode/
+build/
+node_modules/
+!public
+server/
+temp/
+!.env.production.local
+.firebase/
+.firebaserc
+firebase.json
+functions/
