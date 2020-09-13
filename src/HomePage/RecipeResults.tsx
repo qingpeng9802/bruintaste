@@ -65,6 +65,9 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
     },
+    TablePaginationToolbar: {
+      marginLeft: 'auto',
+    },
   }),
 );
 
@@ -194,6 +197,7 @@ function RecipeResults() {
   function Pagination() {
     return (
       <TablePagination className={classes.resultPage}
+        classes={{ toolbar: classes.TablePaginationToolbar }}
         component="div"
 
         count={searchResCount}

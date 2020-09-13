@@ -36,7 +36,7 @@ import ClearIcon from '@material-ui/icons/Clear';
 
 import { searchkey, userskey } from '../apiv1/apiv1Keys';
 
-import {API_PREFIX} from '../apiv1/apiv1EndPoint';
+import { API_PREFIX } from '../apiv1/apiv1EndPoint';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -224,7 +224,7 @@ function SearchBar() {
   );
 
   // when search button is clicked, do searching
-  const handleSearch = useCallback(() => {
+  const handleSearch = useCallback((searFields: any, searchText: string) => {
     // still searching, cut new search
     if (isSearching) {
       return;
@@ -246,8 +246,7 @@ function SearchBar() {
       }
     );
     return;
-  }, [isSearching, setIsSearching, setSearchResults,
-    searFields, searchText, getSearchAsyncDebounced]);
+  }, [isSearching, setIsSearching, setSearchResults, getSearchAsyncDebounced]);
 
   // initial `currPage`
   useEffect(() => {
@@ -258,12 +257,19 @@ function SearchBar() {
 
   return (
     <div className={classes.searchBar}
-      onKeyUp={(event) => event.key === 'Enter' ? handleSearch() : null}>
+      onKeyUp={(event) => event.key === 'Enter' ? handleSearch(searFields, searchText) : null}>
 
       <Autocomplete
         className={classes.acSearch}
         id="ac_search"
         value={searchText}
+
+        onChange={(event, value, reason) => {
+          console.log(value, reason);
+          if (reason === 'select-option' && value) {
+            handleSearch(searFields, value);
+          }
+        }}
 
         onInputChange={(event, value) => {
           setSearchText(value);
@@ -314,7 +320,7 @@ function SearchBar() {
       </div>
 
       <IconButton className={classes.searchIcon} aria-label="search"
-        onClick={handleSearch} >
+        onClick={() => handleSearch(searFields, searchText)} >
         <SearchIcon />
       </IconButton>
 

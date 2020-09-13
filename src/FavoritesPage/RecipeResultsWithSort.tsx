@@ -48,8 +48,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     resultFooter: {
       margin: theme.spacing(1, 3),
-
-      flexFlow: 'row nowrap',
+      display: 'flex',
+      flexFlow: 'row wrap',
       alignItems: 'center',
       marginLeft: 'auto',
     },
@@ -76,7 +76,10 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexFlow: 'row wrap',
       alignItems: 'center',
-      margin: theme.spacing(1, 3),
+      marginTop: 8,
+      marginBottom: 8,
+      marginRight: 8,
+      marginLeft: 'auto',
     },
     sortbySelect: {
       paddingLeft: 8,
@@ -89,6 +92,9 @@ const useStyles = makeStyles((theme: Theme) =>
       flexShrink: 0,
       marginRight: 32,
       marginLeft: 8,
+    },
+    TablePaginationToolbar: {
+      marginLeft: 'auto',
     },
   }),
 );
@@ -313,6 +319,7 @@ function RecipeResultsWithSort() {
   function Pagination() {
     return (
       <TablePagination className={classes.resultPage}
+        classes={{ toolbar: classes.TablePaginationToolbar }}
         component="div"
 
         count={cardsResCount}
