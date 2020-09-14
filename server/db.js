@@ -1,6 +1,8 @@
 // Copyright (c) 2020 Qingpeng Li. All rights reserved.
 // Author: qingpeng9802@gmail.com (Qingpeng Li).
 
+'use strict';
+
 import mongoc from 'mongodb';
 const { MongoClient } = mongoc;
 

@@ -1,6 +1,8 @@
 // Copyright (c) 2020 Qingpeng Li. All rights reserved.
 // Author: qingpeng9802@gmail.com (Qingpeng Li).
 
+'use strict';
+
 import * as client from '../db.js';
 
 // protect api

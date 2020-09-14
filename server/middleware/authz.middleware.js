@@ -1,3 +1,5 @@
+'use strict';
+
 import jwt from 'express-jwt';
 import jwksRsa from 'jwks-rsa';
 

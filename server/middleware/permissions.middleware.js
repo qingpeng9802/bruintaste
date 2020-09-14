@@ -1,3 +1,5 @@
+'use strict';
+
 import jwtAuthz from "express-jwt-authz";
 
 const checkPermissions = (permissions) => {

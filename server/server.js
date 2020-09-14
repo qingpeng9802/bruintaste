@@ -1,6 +1,8 @@
 // Copyright (c) 2020 Qingpeng Li. All rights reserved.
 // Author: qingpeng9802@gmail.com (Qingpeng Li).
 
+'use strict';
+
 // set environment variables
 import dotenv from 'dotenv';
 const envDevstr = '.env.development.local';
