@@ -41,3 +41,4 @@ public/recipe_imgs/
 .firebaserc
 firebase.json
 functions/
+initedFirebase.tsx

@@ -9,4 +9,5 @@ temp/
 .firebase/
 .firebaserc
 firebase.json
+initedFirebase.tsx
 functions/
