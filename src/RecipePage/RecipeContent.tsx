@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(4, 4),
     },
     pageNFL: {
-
+      minWidth: 290,
     },
     pageBodyRight: {
 
