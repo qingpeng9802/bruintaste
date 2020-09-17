@@ -24,16 +24,16 @@ yarn-error.log*
 
 # dev editor
 .vscode/
+.idea/
 temp/
 
 # server side ssl info
 
 
 # server log
-
 server/log/
 
-# assets
+# assets (imgs)
 public/recipe_imgs/
 
 # firebase deployment
@@ -41,4 +41,4 @@ public/recipe_imgs/
 .firebaserc
 firebase.json
 functions/
-initedFirebase.tsx
+firebaseConfig.tsx
