@@ -9,7 +9,13 @@ Due to COVID-19, many UCLA students can't continue to enjoy the meals in residen
 
 ## Project Architecture
 
-//TODO
+The architecture of the app:
+
+![app-arch](app-arch.png)
+
+The route of the app:
+
+![route](route.png)
 
 ## Acknowledgment
 
